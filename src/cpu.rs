@@ -1,4 +1,4 @@
-use bitflags::{bitflags, Flag};
+use bitflags::bitflags;
 
 bitflags! {
     #[derive(Debug, Default)]
