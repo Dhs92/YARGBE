@@ -45,7 +45,7 @@ impl Registers {
 
     pub fn set_af(&mut self, value: u16) {
         self.a = ((value & 0xFF00) >> 8) as u8;
-        self.f = Flags::from_bits_truncate((value & 0xFF) as u8);
+        self.f = Flags::from_bits_truncate((value & 0x0F) as u8);
     }
     pub fn get_bc(&self) -> u16 {
         ((self.b as u16) << 8) | self.c as u16
